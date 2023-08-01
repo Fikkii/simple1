@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+    background-blend-mode: overlay;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.841);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HAcIqIk35ZcM9IxA59tqfwHaE8%26pid%3DApi%26h%3D160&f=1&ipt=f72b26a67652c862b0e224a8ad8e57d69659646937331d259f1508848852d137&ipo=images) ;
+    background-size: cover;
+}
+
+.fluid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    order: 1;
+    grid-column: 1;
+    cursor: pointer;
+}
+
+main {
+    grid-column: 1 / span 2;
+    order: 3;
+}
+
+footer {
+    display: flex;
+    gap: 3px;
+    order: 1;
+    grid-column: 2;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 6px 1px rgba(128, 128, 128, 0.329);
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgba(0, 255, 255, 0.701);
+    transition: all .3s ease;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card .title {
+    display: flex;
+    width: 100%;
+    font-weight: bolder;
+    justify-content: space-between;
+}
+
+.btn {
+    text-align: center;
+    grid-column: 1 / span 2;
+    box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.329);
+    border-radius: 2px;
+    background-color: rgba(0, 255, 255, 0.296);
+    padding: 10px;
+    transition: box-shadow .6s ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.329);
+    background-color: rgba(0, 255, 255, 0.701);
+    transition: all .3s ease;
+}
+
+.brand-title {
+    text-transform: uppercase;
+}
+
+.brand-title span {
+    color: red;
+}
+
+@media (max-width: 700px){
+    footer {
+        order: 3;
+        grid-column: 1 / span 2;
+    }
+    
+    header {
+        grid-column: 1 / span 2;
+    }
+
+    body {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 600px){
+    section {
+        display: flex;
+        gap: 10px;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    body {
+        height: 100vh;
+    }
+}
